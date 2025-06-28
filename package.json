@@ -1,0 +1,17 @@
+{
+  "name": "backend_production",
+  "version": "1.0.0",
+  "description": "A Production Grade Backend",
+  "keywords": [
+    "javascript",
+    "backend",
+    "chai"
+  ],
+  "license": "ISC",
+  "author": "Jatin Prakash",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
