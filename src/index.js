@@ -2,6 +2,7 @@
 import dotenv from "dotenv"
 import connectDB from "./db/index.js"
 dotenv.config({ path: "./env" })
+import { app } from "./app.js"
 
 connectDB() // yeh ek promise return krta hai,,,isliye hum then catch use kr paye
   .then(() => {
@@ -17,7 +18,6 @@ connectDB() // yeh ek promise return krta hai,,,isliye hum then catch use kr pay
   })
 
 /*    
-const app = express()
 ;(async () => {
   try {
     await mongoose.connect(`${process.env.MONGODB_URI}/${DB_NAME}`)
