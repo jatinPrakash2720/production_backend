@@ -15,7 +15,8 @@ connectDB() // yeh ek promise return krta hai,,,isliye hum then catch use kr pay
   })
   .catch((err) => {
     console.log("MONGO db connection failed !!!", err)
-  })
+  }
+)
 
 /*    
 ;(async () => {
