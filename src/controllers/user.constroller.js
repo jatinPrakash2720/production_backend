@@ -11,9 +11,9 @@ const generateAccessAndRefreshTokens = async (userId) => {
     const refreshToken = user.generateRefreshToken()
 
     user.refreshToken = refreshToken
-    console.log(user.refreshToken)
+    // console.log(user.refreshToken)
     await user.save({ validateBeforeSave: false })
-    console.log(user.refreshToken)
+    // console.log(user.refreshToken)
     return { accessToken, refreshToken }
   } catch (error) {
     throw new ApiError(
@@ -128,7 +128,7 @@ const loginUser = asyncHandler(async (req, res) => {
   const { accessToken, refreshToken } = await generateAccessAndRefreshTokens(
     user._id
   )
-  console.log(`accessToken : ${accessToken}, and refreshToken: ${refreshToken}`)
+  // console.log(`accessToken : ${accessToken}, and refreshToken: ${refreshToken}`)
   const loggedInUser = await User.findById(user._id).select(
     "-password -refreshToken"
   )
@@ -139,7 +139,7 @@ const loginUser = asyncHandler(async (req, res) => {
 
   return res
     .status(200)
-    .cookie("accessToken", accessToken, option)
+    .cookie("accessToken", accessToken,option)
     .cookie("refreshToken", refreshToken, option)
     .json(
       new ApiResponse(
