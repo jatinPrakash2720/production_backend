@@ -307,6 +307,7 @@ const updateUserAvatar = asyncHandler(async (req, res) => {
   //new ko update,
   //return
 })
+
 const updateUserCoverImage = asyncHandler(async (req, res) => {
   const coverImageLocalPath = req.files?.path
 
